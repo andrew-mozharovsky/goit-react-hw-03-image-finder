@@ -1,6 +1,6 @@
 const LoadMore = ({ onChange }) => {
   return (
-    <button onClick={onChange} type="button">
+    <button className={"Button"} onClick={onChange} type="button">
       load more
     </button>
   );

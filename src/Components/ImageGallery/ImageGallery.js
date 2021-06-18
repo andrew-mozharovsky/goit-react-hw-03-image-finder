@@ -1,6 +1,10 @@
 import React from "react";
 
-const ImageGallery = ({ children }) => {
-  return <ul className="ImageGallery">{children}</ul>;
+const ImageGallery = ({ children, imageClick }) => {
+  return (
+    <ul onClick={imageClick} className="ImageGallery">
+      {children}
+    </ul>
+  );
 };
 export default ImageGallery;

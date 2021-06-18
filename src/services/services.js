@@ -4,7 +4,7 @@ const fetchImage = async ({ searchQuery, page }) => {
   ).then((r) => r.json());
 };
 
-const ApoServises = {
+const ApoServices = {
   fetchImage,
 };
-export default ApoServises;
+export default ApoServices;

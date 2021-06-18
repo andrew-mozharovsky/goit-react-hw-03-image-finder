@@ -1,11 +1,13 @@
-// import Reacr from 'react'
-// import ImageGallery from '../ImageGallery/ImageGallery'
-
-const ImageGalleryItem = ({ imageArr }) => {
-  return imageArr.map(({ webformatURL, id, tags }) => {
+const ImageGalleryItem = ({ imageArr, onClick }) => {
+  return imageArr.map(({ webformatURL, id, tags, largeImageURL }) => {
     return (
-      <li key={id} className="ImageGalleryItem">
-        <img src={webformatURL} alt={tags} className="ImageGalleryItem-image" />
+      <li onClick={onClick} key={id} className="ImageGalleryItem">
+        <img
+          data-largeurl={largeImageURL}
+          src={webformatURL}
+          alt={tags}
+          className="ImageGalleryItem-image"
+        />
       </li>
     );
   });
