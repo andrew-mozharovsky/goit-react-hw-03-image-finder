@@ -2,14 +2,10 @@
 // import ImageGallery from '../ImageGallery/ImageGallery'
 
 const ImageGalleryItem = ({ imageArr }) => {
-  return imageArr.map((image) => {
+  return imageArr.map(({ webformatURL, id, tags }) => {
     return (
-      <li className="ImageGalleryItem">
-        <img
-          src={image.userImageURL}
-          alt=""
-          className="ImageGalleryItem-image"
-        />
+      <li key={id} className="ImageGalleryItem">
+        <img src={webformatURL} alt={tags} className="ImageGalleryItem-image" />
       </li>
     );
   });
